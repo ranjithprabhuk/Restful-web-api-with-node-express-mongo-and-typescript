@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript/issues"
   },
-  "homepage": "https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript#readme"
+  "homepage": "https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript#readme",
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
 }
