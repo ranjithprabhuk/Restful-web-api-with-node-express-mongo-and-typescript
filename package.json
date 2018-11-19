@@ -1,0 +1,27 @@
+{
+  "name": "restful-web-api-with-node-express-mongo-and-typescript",
+  "version": "1.0.0",
+  "description": "Restful web api with node express mongo and typescript",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "mongo",
+    "restful",
+    "api"
+  ],
+  "author": "Ranjithprabhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript/issues"
+  },
+  "homepage": "https://github.com/ranjithprabhuk/Restful-web-api-with-node-express-mongo-and-typescript#readme"
+}
