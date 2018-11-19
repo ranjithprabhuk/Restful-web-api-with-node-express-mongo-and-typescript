@@ -1,13 +1,18 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
+import { UserRoutes } from './routes/userRoutes';
 
 class App {
 
     public app: express.Application;
+    public userRoutes: UserRoutes = new UserRoutes();
 
     constructor() {
         this.app = express();
         this.config();
+
+        // Wire the Route to the app
+        this.userRoutes.routes(this.app);
     }
 
     private config(): void {
