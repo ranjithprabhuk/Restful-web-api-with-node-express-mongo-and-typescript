@@ -14,13 +14,40 @@ export class UserController {
         });
     }
 
+    public getUser(req: Request, res: Response): void {
+        User.findOne({ _id: req.params.userId}, (err, users) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(users);
+        });
+    }
+
     public addNewUser(req: Request, res: Response): void {
         const user = new User(req.body);
-        user.save((err, contact) => {
+        user.save((err, newUser) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(newUser);
+        });
+    }
+
+    public updateUser(req: Request, res: Response): void {
+        User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true }, (err, contact) => {
             if (err) {
                 res.send(err);
             }
             res.json(contact);
+        });
+    }
+
+    public deleteUser(req: Request, res: Response): void {
+        User.remove({ _id: req.params.userId }, (err) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json({ message: 'Successfully deleted user!' });
         });
     }
 }

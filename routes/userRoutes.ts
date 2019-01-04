@@ -12,7 +12,10 @@ export class UserRoutes {
                 });
             });
 
-        app.route('/users').get(this.userController.getUsers);
-        app.route('/users').post(this.userController.addNewUser);
+        app.route('/user').get(this.userController.getUsers);
+        app.route('/user/:userId').get(this.userController.getUser);
+        app.route('/user').post(this.userController.addNewUser);
+        app.route('/user/:userId').put(this.userController.updateUser);
+        app.route('/user/:userId').delete(this.userController.deleteUser);
     }
 }
