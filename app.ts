@@ -25,7 +25,6 @@ class App {
     }
 
     private initializeMongoConnection(): void {
-        mongoose.Promise = global.Promise;
         mongoose.connect(this.mongoUrl);
     }
 }
