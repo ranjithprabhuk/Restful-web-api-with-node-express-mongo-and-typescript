@@ -15,7 +15,7 @@ export class UserController {
     }
 
     public getUser(req: Request, res: Response): void {
-        User.findOne({ _id: req.params.userId}, (err, users) => {
+        User.findById(req.params.userId, (err, users) => {
             if (err) {
                 res.send(err);
             }
@@ -34,7 +34,7 @@ export class UserController {
     }
 
     public updateUser(req: Request, res: Response): void {
-        User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true }, (err, contact) => {
+        User.findOneAndUpdate(req.params.userId, req.body, { new: true }, (err, contact) => {
             if (err) {
                 res.send(err);
             }
@@ -43,7 +43,7 @@ export class UserController {
     }
 
     public deleteUser(req: Request, res: Response): void {
-        User.remove({ _id: req.params.userId }, (err) => {
+        User.deleteOne(req.params.userId, (err) => {
             if (err) {
                 res.send(err);
             }
